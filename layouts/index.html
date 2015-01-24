@@ -1,42 +1,33 @@
+{{ $baseurl := .Site.BaseUrl }}
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
-        <title> {{ .Title }} &middot; {{ .Site.Title }} </title>
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--[if lte IE 8]>
-            <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
-        <![endif]-->
-        <!--[if gt IE 8]><!-->
-            <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
-        <!--<![endif]-->
-        <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/main.css">
+        {{ partial "head.html" . }}
     </head>
-    <body>
+    <body >
         <div class="pure-g">
             <div class="sidebar pure-u-1 pure-u-md-1-4">
-                <div class="header">
-                    <h1>Arvinsim's Dev Blog</h1>
-                    <h2>Thoughts, tips and more</h2>
-                </div>
+                {{ partial "sidebar.html" . }}
             </div>
             <div class="main-content pure-u-1 pure-u-md-3-4">
-                <div class="posts">
-                    {{ range .Data.Pages }}
-                    <section class="post">
-                        <h1>
-                            <a href="{{ .Permalink }}">{{ .Title }}</a>
-                        </h1>
-                        <span class="post-date">January 22, 2015</span>
-                        <ul class="tags">
-                            <li><a href="#" class="buttom-small pure-button">tags</a></li>
-                            <li><a href="#" class="buttom-small pure-button">go</a></li>
-                            <li><a href="#" class="buttom-small pure-button">here</a></li>
-                        </ul>
-                        {{ .Content }}
-                    </section>
-                    {{ end }}
+                <div class="homepage">
+                    <div class="posts">
+                        {{ range .Data.Pages }}
+                        <section class="post">
+                            <div class="title">
+                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                <span class="select-indicator">&Delta;</span>
+                            </div>
+                            <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
+                            {{ range .Params.tags }}
+                            <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="button-small pure-button tag">{{ . }}</a>
+                            {{ end }}
+                            <div class="description">
+                                {{ .Description }}
+                            </div>
+                        </section>
+                        {{ end }}
+                    </div>
                 </div>
             </div>
         </div>
