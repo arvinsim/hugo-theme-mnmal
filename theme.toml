@@ -1,0 +1,6 @@
+author = "Arthur Vincent Simon"
+description = "A theme for my development devblog"
+license = "MIT"
+name = "arvinsim devblog"
+source_repo = ""
+tags = ["development", "blog"]

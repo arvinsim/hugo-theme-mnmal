@@ -1,2 +1,3 @@
-# hugo-theme-mnmal
-A two column, minimal theme for Hugo static site generator
+# Arvinsim-devblog
+
+Arvinsim-devblog is a simple blog I made myself for my [site](http://arvinsim.github.io/devblog)
