@@ -1,3 +1,3 @@
-# Arvinsim-devblog
+#  Hugo-theme-mnmal
 
-Arvinsim-devblog is a simple blog I made myself for my [site](http://arvinsim.github.io/devblog)
+Hugo-theme-mnmal is a simple blog I made myself for my [site](http://arvinsim.github.io/devblog)
