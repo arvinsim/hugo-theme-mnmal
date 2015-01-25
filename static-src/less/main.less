@@ -2,6 +2,12 @@
 @dark-green: #003613;
 @white: #FFFFFF;
 
+/** Mixin **/
+.unlink {
+    color: inherit;
+    text-decoration: none;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -21,12 +27,6 @@ body {
         background-color: #F9F9F9;
         border-radius: 3px; 
     }
-}
-
-/** Mixin **/
-.unlink {
-    color: inherit;
-    text-decoration: none;
 }
 
 .sidebar {
@@ -60,6 +60,7 @@ body {
             padding: 2em 0em 0px;
 
             .title {
+                .unlink
                 font-size: 1.5em;
 
                 .select-indicator {
