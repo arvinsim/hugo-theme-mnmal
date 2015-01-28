@@ -29,7 +29,7 @@ body {
     color: @dark-green;
 
     pre {
-        margin: 2em 2em;
+        margin: 2em 0px;
 
         code {
             font-family: monospace;
@@ -73,6 +73,25 @@ body {
     padding: 2em 3em 0px;
     margin-left: 25%;
 
+    .post {
+        h1 a {
+            .unlink;
+        }
+
+        .post-date {
+            font-style: italic;
+        }
+
+        .tags {
+            display: inline;
+            list-style-type: none;
+
+            li {
+                display: inline;
+            }
+        }
+    }
+
     &.homepage, &.taxonomy {
         .post {
             padding: 2em 0em 0px;
@@ -109,21 +128,18 @@ body {
         }
     }
 
-    .post {
-        h1 a {
-            .unlink;
-        }
+    &.single {
+       .post {
+           .post-date {
+               font-size: 0.75em;
+            }
 
-        .post-date {
-            font-style: italic;
-        }
+            .tags {
+               font-size: 0.75em;
+            }
 
-        .tags {
-            display: inline;
-            list-style-type: none;
-
-            li {
-                display: inline;
+           .content {
+               margin-top: 2em;
             }
         }
     }
