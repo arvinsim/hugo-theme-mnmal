@@ -12,6 +12,14 @@
     box-sizing: border-box;
 }
 
+/** Pure CSS overrides **/
+.button-small {
+    font-size: 0.75em;
+}
+
+
+/** *Main */
+
 html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
     font-family: 'Ubuntu', sans-serif;
 }
@@ -20,12 +28,17 @@ body {
     background-color: @white;
     color: @dark-green;
 
-    code {
-        font-family: monospace;
-        padding: 0.25em 0.5em;
-        color: #000D6E;
-        background-color: #F9F9F9;
-        border-radius: 3px; 
+    pre {
+        margin: 2em 2em;
+
+        code {
+            font-family: monospace;
+            color: @white;
+            background-color: @dark-green;
+            box-sizing: padding-box;
+            padding: 2em 2em;
+            border-radius: 3px; 
+        }
     }
 }
 
@@ -45,6 +58,7 @@ body {
         }
 
         .site-title a {
+            font-size: 2em;
             text-decoration: none;
             color: inherit;
         }
