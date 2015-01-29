@@ -45,12 +45,8 @@ body {
 .sidebar {
     background-color: @dark-green;
     color: @white;
-    position: fixed;
-    top: 0px;
-    bottom: 0px;
 
     .header {
-        margin: 80% 2em 0px;
         text-align: right;
 
         .site-logo {
@@ -70,9 +66,6 @@ body {
 }
 
 .main-content {
-    padding: 2em 3em 0px;
-    margin-left: 25%;
-
     .post {
         h1 a {
             .unlink;
@@ -144,3 +137,21 @@ body {
         }
     }
 } 
+
+/* Media queries */
+@media (min-width: 48em) { 
+    .main-content {
+        padding: 2em 3em 0;
+        margin-left: 25%;
+    }
+
+    .sidebar {
+        .header {
+            margin: 10% 2em 0;
+        }
+
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+}
