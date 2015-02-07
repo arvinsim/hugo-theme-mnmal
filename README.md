@@ -37,5 +37,6 @@ There are two themes available for now
 
     theme-dark-green
     theme-dark-blue
+    theme-gold
 
 `theme-dark-green` is the default if the `themeColor` variable is not set.

@@ -1,35 +1,49 @@
 /* Colors */
 @dark-green: #003613;
 @dark-blue: #031B40;
+@gold: #E5BF16;
 @white: #FFFFFF;
+@black: #000000;
 
-/* Mixin */
+/* Mixins */
 .unlink {
     color: inherit;
     text-decoration: none;
 }
 
-.theme-colors (@theme_name) when (@a = "dark-blue") {
-    .fg-bg-default {
+
+.theme-colors(@name, @scheme) {}
+.theme-colors(@name, @scheme) when (@name = "dark-blue") {
+    & when (@scheme = "default") {
         background-color: @white;
         color: @dark-blue;
     }
 
-    .fg-bg-inverse {
+    & when (@scheme = "sidebar") {
         background-color: @dark-blue;
         color: @white;
     }
 }
-
-.theme-colors (@theme_name) when (@a = "dark-green") {
-    .fg-bg-default {
+.theme-colors(@name, @scheme) when (@name = "dark-green") {
+    & when (@scheme = "default") {
         background-color: @white;
         color: @dark-green;
     }
 
-    .fg-bg-inverse {
+    & when (@scheme = "sidebar") {
         background-color: @dark-green;
         color: @white;
+    }
+}
+.theme-colors(@name, @scheme) when (@name = "gold") {
+    & when (@scheme = "default") {
+        background-color: @white;
+        color: @black;
+    }
+
+    & when (@scheme = "sidebar") {
+        background-color: @gold;
+        color: @black;
     }
 }
 
@@ -49,11 +63,15 @@ html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
 
 body {
     &.theme-dark-blue {
-        .theme-colors("dark-blue").fg-bg-default
+        .theme-colors("dark-blue", "default")
     }
 
     &.theme-dark-green {
-        .theme-colors("dark-green").fg-bg-default
+        .theme-colors("dark-green", "default")
+    }
+
+    &.theme-gold {
+        .theme-colors("gold", "default")
     }
 
     pre {
@@ -72,11 +90,15 @@ body {
 
 .sidebar {
     .theme-dark-blue & {
-        .theme-colors("dark-blue").fg-bg-inverse
+        .theme-colors("dark-blue", "sidebar")
     }
 
     .theme-dark-green & {
-        .theme-colors("dark-green").fg-bg-inverse
+        .theme-colors("dark-green", "sidebar")
+    }
+
+    .theme-gold & {
+        .theme-colors("gold", "sidebar")
     }
 
     .header {
