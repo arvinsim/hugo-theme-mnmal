@@ -27,3 +27,15 @@ To check if it is installed, run this command
 
     gulp less
 
+## Setting the theme colors
+
+You can set your color scheme by settings the `themeColor` variable in your site configuration file.
+
+    themeColor = "theme-dark-green" 
+
+There are two themes available for now
+
+    theme-dark-green
+    theme-dark-blue
+
+`theme-dark-green` is the default if the `themeColor` variable is not set.
