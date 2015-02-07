@@ -1,32 +1,60 @@
-/** Colors **/
+/* Colors */
 @dark-green: #003613;
+@dark-blue: #031B40;
 @white: #FFFFFF;
 
-/** Mixin **/
+/* Mixin */
 .unlink {
     color: inherit;
     text-decoration: none;
 }
 
-* {
-    box-sizing: border-box;
+.theme-colors (@theme_name) when (@a = "dark-blue") {
+    .fg-bg-default {
+        background-color: @white;
+        color: @dark-blue;
+    }
+
+    .fg-bg-inverse {
+        background-color: @dark-blue;
+        color: @white;
+    }
 }
 
-/** Pure CSS overrides **/
+.theme-colors (@theme_name) when (@a = "dark-green") {
+    .fg-bg-default {
+        background-color: @white;
+        color: @dark-green;
+    }
+
+    .fg-bg-inverse {
+        background-color: @dark-green;
+        color: @white;
+    }
+}
+
+/* Pure CSS overrides */
 .button-small {
     font-size: 0.75em;
 }
 
-
-/** *Main */
+/* Main */
+* {
+    box-sizing: border-box;
+}
 
 html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
     font-family: 'Ubuntu', sans-serif;
 }
 
 body {
-    background-color: @white;
-    color: @dark-green;
+    &.theme-dark-blue {
+        .theme-colors("dark-blue").fg-bg-default
+    }
+
+    &.theme-dark-green {
+        .theme-colors("dark-green").fg-bg-default
+    }
 
     pre {
         margin: 2em 0px;
@@ -43,8 +71,13 @@ body {
 }
 
 .sidebar {
-    background-color: @dark-green;
-    color: @white;
+    .theme-dark-blue & {
+        .theme-colors("dark-blue").fg-bg-inverse
+    }
+
+    .theme-dark-green & {
+        .theme-colors("dark-green").fg-bg-inverse
+    }
 
     .header {
         text-align: right;
