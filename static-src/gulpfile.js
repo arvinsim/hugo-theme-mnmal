@@ -10,7 +10,7 @@ gulp.task('less', function() {
         .pipe(gulp.dest('../static/css'))
 });
 
-gulp.task('default', function() {
+gulp.task('default', ['less'], function() {
     var watcher = gulp.watch('./less/**/*.less', ['less']);
     watcher.on('change', function() {
         console.log('LESS files has changed. Compiling...');
