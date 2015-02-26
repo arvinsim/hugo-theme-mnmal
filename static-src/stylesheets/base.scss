@@ -1,0 +1,18 @@
+$primary-color: hsl(141, 100%, 11%);
+$secondary-color: hsl(291, 100%, 11%);
+$tertiary-color: hsl(351, 100%, 11%);
+
+$colors: (
+    'primary': $primary-color,
+    'secondary': $secondary-color,
+    'tertiary': $tertiary-color
+);
+
+@include global-box-sizing(border-box); 
+
+$base-font-type: "Ubuntu", sans-serif: 
+$base-font-size: 18px;
+
+html {
+    font-size: $base-font-size;
+}
