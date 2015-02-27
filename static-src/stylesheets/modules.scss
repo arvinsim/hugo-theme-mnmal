@@ -6,30 +6,83 @@
 .tag {
     color: map-get($colors, secondary);
     background-color: map-get($colors, quinary);
-    font-size: 0.70em;
+    font-size: 0.70rem;
+    font-weight: bold;
+    font-style: italic;
     border-radius: 4px;
     padding: 4px;
     text-decoration: none;
+
+    &:hover {
+        color: map-get($colors, quinary);
+        background-color: map-get($colors, secondary);
+    }
 }
 
-.post {
+.post-item {
+    padding: 1.5rem 0;
+    text-align: center;
+
+    .title {
+        margin: 0;
+    }
 }
 
 .sidebar {
-    background-color: map-get($colors, secondary);
     color: map-get($colors, senary);
+    background-color: map-get($colors, secondary);
+    border-bottom: 0.5rem solid map-get($colors, tertiary);
     text-align: center;
+
+    .details {
+        h1, h2 {
+            margin: 0;
+            display: inline;
+
+            &.title {
+                font-size: 3rem;
+                font-style: italic;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+
+            &.description {
+                font-weight: lighter;
+                font-size: 1em;
+            }
+        }
+    }
 }
 
-.main-content {
+main {
     .title a {
         text-decoration: none;
     }
 }
 
+footer {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+
 /* Page specific rules */
 .single {
     h1 {
         font-size: 3rem;
+        margin: 0;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+}
+
+.taxonomy {
+    .term {
+        text-align: center;
     }
 }

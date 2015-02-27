@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px) {
+    .sidebar .details {
+        .logo, .title, .description {
+            display: block;
+        }
+    }
+
+    main {
+        @include pad(5%, 5%)
+    }
+}
