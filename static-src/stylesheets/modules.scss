@@ -1,34 +1,35 @@
 .date {
-    font-size: 0.70em;
+    font-size: 0.80rem;
     color: lighten(map-get($colors, tertiary), 20%);
 }
 
 .tag {
-    color: white;
-    background-color: map-get($colors, primary);
+    color: map-get($colors, secondary);
+    background-color: map-get($colors, quinary);
     font-size: 0.70em;
-    border-radius: 10px;
+    border-radius: 4px;
     padding: 4px;
     text-decoration: none;
 }
 
 .post {
-    .title a {
-        color: map-get($colors, secondary);
-        text-decoration: none;
-    }
-
-    .description {
-        
-    }
 }
 
 .sidebar {
-    background-color: map-get($colors, tertiary);
-    color: white;
-    
-    a {
-        color: white;
+    background-color: map-get($colors, secondary);
+    color: map-get($colors, senary);
+    text-align: center;
+}
+
+.main-content {
+    .title a {
+        text-decoration: none;
     }
 }
 
+/* Page specific rules */
+.single {
+    h1 {
+        font-size: 3rem;
+    }
+}
