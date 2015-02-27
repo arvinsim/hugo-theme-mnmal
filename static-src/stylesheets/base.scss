@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,400,300italic,300,600,600italic);
+
 /*$primary-color: hsl(141, 100%, 11%);*/
 /*$secondary-color: hsl(291, 100%, 11%);*/
 /*$tertiary-color: hsl(351, 100%, 11%);*/
@@ -18,9 +20,10 @@ $colors: (
 
 @include global-box-sizing(border-box); 
 
-$base-font-type: "Ubuntu", sans-serif: 
-$base-font-size: 18px;
+$base-font-type: 'Source Sans Pro', sans-serif;
+$base-font-size: 16px;
 
 html {
+    font-type: $base-font-type;
     font-size: $base-font-size;
 }
