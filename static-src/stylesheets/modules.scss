@@ -29,7 +29,7 @@
     }
 }
 
-.sidebar {
+header {
     color: map-get($colors, senary);
     background-color: map-get($colors, secondary);
     border-bottom: 0.5rem solid map-get($colors, tertiary);
@@ -37,12 +37,12 @@
 
     .details {
         h1, h2 {
+            font-family: $secondary-font-type;
             margin: 0;
             display: inline;
 
             &.title {
-                font-size: 3rem;
-                font-style: italic;
+                font-size: 4rem;
 
                 a {
                     text-decoration: none;
@@ -58,6 +58,8 @@
 }
 
 main {
+    padding-top: 2rem;
+
     .title a {
         text-decoration: none;
     }

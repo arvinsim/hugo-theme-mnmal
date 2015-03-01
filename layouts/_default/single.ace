@@ -1,8 +1,9 @@
 = doctype html
 html lang="en-us"
+html lang="en-us"
   head {{ partial "head" . }}
-  body
+  body 
     div.app
       header {{ partial "sidebar" . }}
-      main.homepage {{ partial "post-list" . }}
+      main.single {{ partial "post" . }}
       {{ partial "footer" . }}

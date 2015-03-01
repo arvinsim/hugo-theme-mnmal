@@ -4,5 +4,7 @@ html lang="en-us"
   body
     div.app
       header {{ partial "sidebar" . }}
-      main.homepage {{ partial "post-list" . }}
+      main.taxonomy
+        h1.term Tag: {{.Title}}
+        {{ partial "post-list" . }}
       {{ partial "footer" . }}
