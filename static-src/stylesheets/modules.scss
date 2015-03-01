@@ -36,6 +36,8 @@ header {
     text-align: center;
 
     .details {
+        font-family: $secondary-font-family;
+
         h1, h2 {
             margin: 0;
             display: inline;

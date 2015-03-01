@@ -16,14 +16,14 @@ $colors: (
     'senary': $senary-color
 );
 
-$primary-font-type: 'Source Sans Pro', sans-serif;
-$secondary-font-type: 'Open Sans Condensed', sans-serif;
+$primary-font-family: 'Source Sans Pro', sans-serif;
+$secondary-font-family: 'Open Sans Condensed', sans-serif;
 $base-font-size: 18px;
 
 @include global-box-sizing(border-box); 
 
 html {
-    font-family: $primary-font-type;
+    font-family: $primary-font-family;
     font-size: $base-font-size;
     color: map-get($colors, senary);
     background-color: map-get($colors, primary);
