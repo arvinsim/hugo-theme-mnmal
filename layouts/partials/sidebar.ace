@@ -1,0 +1,5 @@
+div.details
+  span.logo ＿〆(。。)
+  h1.title
+    a href="{{.Site.BaseUrl}}" {{.Site.Title}}
+  h2.description {{.Site.Params.description}}
