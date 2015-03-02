@@ -10,6 +10,10 @@ main {
     @include pad(20%, 20%);
     @include span(1 of 1);
 
+    @media screen and (min-width: 768px) {
+        @include pad(30%, 30%);
+    }
+
     @media screen and (max-width: 768px) {
         @include pad(5%, 5%);
     }
